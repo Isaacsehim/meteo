@@ -1,17 +1,17 @@
 body {
-	font-family: 'Arial', sans-serif;
+	font-family: 'new-hero', sans-serif;
 	background-color: #a4d4f5;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	height: 100vh;
+	height: 80vh;
   }
-  
-  /* Application météo */
-  .meteo-app {
 
-  }
-  
+/* Image de fond */
+.image-fond {
+	max-width: 50px; 
+	opacity: 0.8;
+}
+
   /* Carte météo */
   .meteo-card {
 	background: linear-gradient(1deg, #6fc3f7, #439bda);
@@ -26,20 +26,22 @@ body {
   /* Titre principal */
   h1 {
 	font-family: "new-hero", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 	font-style: normal;
+	cursor: pointer;
   }
-  
-  h1 ::last-child {
-	font-family: 'Times New Roman', Times, serif;
+  /* juste pour le "®" !*/
+  .titre .simple {
+	font-family: Arial, sans-serif;
+	font-size: small;
   }
   
   /* En-tête */
   .header {
 	display: flex;
-	font-size: 20px;
-	margin-bottom: 10px;
+	font-size: 18px;
 	align-items: center;
+	justify-content: space-between;
   }
   
   .choix-ville {
@@ -50,18 +52,22 @@ body {
 	cursor: pointer;
 	display: flex;
 	flex-direction: row-reverse;
-	font-size: 140%;
-	margin-left: 35%;
+	font-size: 120%;
+	margin-left: 19%;
   }
   
   /* Météo actuelle */
   .meteo-actuel {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
   }
-  
+  h2.temperature {
+	margin: 0;
+  }
+
   .temperature {
-	font-size: 100px;
+	font-size: 80px;
   }
   
   .condition {
@@ -73,17 +79,24 @@ body {
 	font-size: 16px;
 	opacity: 0.8;
   }
-  
+
   /* Prévisions des prochains jours */
   .prochains-jours {
 	display: flex;
-	justify-content: space-around;
-	text-align: center;
-	margin-top: 20px;
+	flex-direction: column;
+	align-items: center;
 	background-color: #a4d4f5;
 	border-radius: 10px;
   }
   
+  .jour {
+	display: flex;
+	align-items: center;
+	width: 80%;
+	justify-content: space-between;
+
+  }
+
   .jour p:first-child {
 	font-weight: bold;
   }
@@ -93,3 +106,56 @@ body {
 	opacity: 0.8;
   }
   
+  .carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+
+.item:nth-child(1) {
+    background: #74C390;
+}
+
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+
+.item:nth-child(3) {
+    background: #E46653;
+}
