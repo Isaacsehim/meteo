@@ -1,0 +1,81 @@
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #a4d4f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .meteo-app {
+
+  }
+  
+  .meteo-card {
+	background: linear-gradient(1deg, #6fc3f7, #439bda);
+	width: 300px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	padding: 20px;
+	color: white;
+  }
+  
+  h1 {
+	font-family: "new-hero", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+
+  .header {
+	display: flex;
+	font-size: 20px;
+	margin-bottom: 10px;
+	align-items: center;
+  }
+
+  .choix-ville {
+	cursor: pointer;
+  }
+  
+  .reglages-icon {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 140%;
+  }
+  
+  .meteo-actuel {
+	margin: 20px;
+  }
+  
+  .temperature {
+	font-size: 64px;
+  }
+  
+  .condition {
+	font-size: 24px;
+	margin: 5px;
+  }
+  
+  .maximale-minimale {
+	font-size: 16px;
+	opacity: 0.8;
+  }
+  
+  .prochains-jours {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  .jour p:first-child {
+	font-weight: bold;
+  }
+  
+  .jour p:last-child {
+	font-size: 14px;
+	opacity: 0.8;
+  }
+  
