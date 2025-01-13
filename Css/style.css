@@ -7,10 +7,12 @@ body {
 	height: 100vh;
   }
   
+  /* Application météo */
   .meteo-app {
 
   }
   
+  /* Carte météo */
   .meteo-card {
 	background: linear-gradient(1deg, #6fc3f7, #439bda);
 	width: 300px;
@@ -21,19 +23,25 @@ body {
 	color: white;
   }
   
+  /* Titre principal */
   h1 {
 	font-family: "new-hero", sans-serif;
 	font-weight: 700;
 	font-style: normal;
   }
-
+  
+  h1 ::last-child {
+	font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* En-tête */
   .header {
 	display: flex;
 	font-size: 20px;
 	margin-bottom: 10px;
 	align-items: center;
   }
-
+  
   .choix-ville {
 	cursor: pointer;
   }
@@ -43,19 +51,22 @@ body {
 	display: flex;
 	flex-direction: row-reverse;
 	font-size: 140%;
+	margin-left: 35%;
   }
   
+  /* Météo actuelle */
   .meteo-actuel {
-	margin: 20px;
+	display: flex;
+	align-items: center;
   }
   
   .temperature {
-	font-size: 64px;
+	font-size: 100px;
   }
   
   .condition {
-	font-size: 24px;
-	margin: 5px;
+	font-size: 15px;
+	font-weight: bold;
   }
   
   .maximale-minimale {
@@ -63,11 +74,14 @@ body {
 	opacity: 0.8;
   }
   
+  /* Prévisions des prochains jours */
   .prochains-jours {
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
 	margin-top: 20px;
+	background-color: #a4d4f5;
+	border-radius: 10px;
   }
   
   .jour p:first-child {
