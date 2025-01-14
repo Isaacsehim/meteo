@@ -46,6 +46,12 @@ body {
   
   .choix-ville {
 	cursor: pointer;
+
+  }
+
+  .choix-ville:hover {
+    opacity: 0.33;
+    transition-duration: 1s;
   }
   
   .reglages-icon {
@@ -54,8 +60,14 @@ body {
 	flex-direction: row-reverse;
 	font-size: 120%;
 	margin-left: 19%;
+  color: #a4d4f5;
   }
   
+  .reglages-icon:hover {
+    transform: rotate(360deg);
+    transition-duration: 1s;
+  }
+
   /* Météo actuelle */
   .meteo-actuel {
 	display: flex;
@@ -94,6 +106,8 @@ body {
 	align-items: center;
 	width: 80%;
 	justify-content: space-between;
+  margin-block-start: -0.2rem;
+  margin-block-end: -0.2rem;
 
   }
 
@@ -105,57 +119,3 @@ body {
 	font-size: 14px;
 	opacity: 0.8;
   }
-  
-  .carousel-fade {
-    .carousel-inner {
-        .item {
-            transition-property: opacity;
-        }
-        
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-    .carousel-control {
-        z-index: 2;
-    }
-}
-
-
-
-html, 
-body, 
-.carousel, 
-.carousel-inner, 
-.carousel-inner .item {
-    height: 100%;
-}
-
-.item:nth-child(1) {
-    background: #74C390;
-}
-
-.item:nth-child(2) {
-    background: #51BCE8;
-}
-
-.item:nth-child(3) {
-    background: #E46653;
-}

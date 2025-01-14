@@ -7,7 +7,8 @@
 	<title>Cloudy</title>
 	<link rel="stylesheet" href="Css/style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/ehv5foc.css">
-    <script defer src="assets/script.js"></script>
+	<script defer src="assets/script.js"></script>
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
 <body>
@@ -16,49 +17,38 @@
 			<h1 class="titre">Cloudy<span class="simple">®</span></h1>
 			<header class="header">
 				<div class="image-card">
-					<img class="image-fond" src="img/soleil.png" alt="Fond soleil" />
+					<img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" />
 				</div>
 				<h2>Le Havre</h2>
-				<span class="choix-ville">📍</span>
-				<span class="reglages-icon">⚙️</span>
+				<span class="choix-ville"><box-icon color="#a4d4f5" type='solid' name='map'></box-icon></span>
+				<span class="reglages-icon"><box-icon color="#a4d4f5" type='solid' name='cog'></box-icon></span>
 			</header>
 			<div class="meteo-actuel">
 				<h2 class="temperature">22°</h2>
 				<p class="condition">Ensoleillé</p>
 				<p class="maximale-minimale">22°/14°</p>
 			</div>
-			<div class="prochains-jours">			
+			<div class="prochains-jours">
 				<div class="jour">
-					<p>☁️</p>
+					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
 					<p>Ce jour</p>
 					<p>22° / 14°</p>
 				</div>
 				<div class="jour">
-					<p>☀️</p>
+					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
 					<p>lundi</p>
 					<p>20° / 12°</p>
 				</div>
 				<div class="jour">
-					<p>⛈️</p>
+					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
 					<p>mardi</p>
 					<p>19° / 10°</p>
 				</div>
-				<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel" data-slide-to="1"></li>
-						<li data-target="#carousel" data-slide-to="2"></li>
-					</ol>
-					<!-- Carousel items -->
-					<div class="carousel-inner">
-						<div class="active item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-					<!-- Carousel nav -->
-					<a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
-				</div>	
+			</div>
+			<div class="ventleverhumidité">
+				<h2 class="leversoleil">lever du soleil</h2>
+				<h3 class="vents"><box-icon name='wind'></box-icon></h3>
+				<h4 class="humidité"><box-icon name='water'></box-icon></h4>
 			</div>
 		</div>
 	</div>
