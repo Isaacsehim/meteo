@@ -4,16 +4,16 @@ body {
 	display: flex;
 	justify-content: center;
 	height: 80vh;
-  }
-
-/* Image de fond */
-.image-fond {
-	max-width: 50px; 
-	opacity: 0.8;
 }
 
-  /* Carte météo */
-  .meteo-card {
+/* Icône météo */
+.image-fond {
+	max-width: 80px;
+	opacity: 0.9;
+}
+
+/* Carte météo */
+.meteo-card {
 	background: linear-gradient(1deg, #6fc3f7, #439bda);
 	width: 300px;
 	border-radius: 20px;
@@ -21,101 +21,159 @@ body {
 	text-align: center;
 	padding: 20px;
 	color: white;
-  }
-  
-  /* Titre principal */
-  h1 {
+}
+
+/* Titre principal */
+h1 {
 	font-family: "new-hero", sans-serif;
 	font-weight: 600;
 	font-style: normal;
 	cursor: pointer;
-  }
-  /* juste pour le "®" !*/
-  .titre .simple {
+}
+
+/* juste pour le "®" !*/
+.titre .simple {
 	font-family: Arial, sans-serif;
 	font-size: small;
-  }
-  
-  /* En-tête */
-  .header {
+}
+
+/* En-tête */
+.header {
 	display: flex;
 	font-size: 18px;
 	align-items: center;
 	justify-content: space-between;
-  }
-  
-  .choix-ville {
+}
+
+.choix-ville {
 	cursor: pointer;
 
-  }
+}
 
-  .choix-ville:hover {
-    opacity: 0.33;
-    transition-duration: 1s;
-  }
-  
-  .reglages-icon {
+.choix-ville:hover {
+	opacity: 0.33;
+	transition-duration: 1s;
+}
+
+.reglages-icon {
 	cursor: pointer;
 	display: flex;
 	flex-direction: row-reverse;
 	font-size: 120%;
 	margin-left: 19%;
-  color: #a4d4f5;
-  }
-  
-  .reglages-icon:hover {
-    transform: rotate(360deg);
-    transition-duration: 1s;
-  }
+	color: #a4d4f5;
+}
 
-  /* Météo actuelle */
-  .meteo-actuel {
+.reglages-icon:hover {
+	transform: rotate(360deg);
+	transition-duration: 1s;
+}
+
+/* Météo actuelle */
+.meteo-actuel {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-  }
-  h2.temperature {
-	margin: 0;
-  }
+}
 
-  .temperature {
+h2.temperature {
+	margin: 0;
+}
+
+.temperature {
 	font-size: 80px;
-  }
-  
-  .condition {
+}
+
+.condition {
 	font-size: 15px;
 	font-weight: bold;
-  }
-  
-  .maximale-minimale {
+}
+
+.maximale-minimale {
 	font-size: 16px;
 	opacity: 0.8;
-  }
+}
 
-  /* Prévisions des prochains jours */
-  .prochains-jours {
+/* Prévisions des prochains jours */
+.prochains-jours {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: #a4d4f5;
 	border-radius: 10px;
-  }
-  
-  .jour {
+}
+
+.jour {
 	display: flex;
 	align-items: center;
 	width: 80%;
 	justify-content: space-between;
-  margin-block-start: -0.2rem;
-  margin-block-end: -0.2rem;
+	margin-block-start: -0.2rem;
+	margin-block-end: -0.2rem;
 
-  }
+}
 
-  .jour p:first-child {
+.jour p:first-child {
 	font-weight: bold;
-  }
-  
-  .jour p:last-child {
+}
+
+.jour p:last-child {
 	font-size: 14px;
 	opacity: 0.8;
-  }
+}
+
+.leversoleil {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.vents {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.humidité {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#search-bar {
+    display: none; /* Masqué par défaut */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#search-bar input {
+    border: 1px solid #a4d4f5;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#search-bar button {
+    background-color: #439bda;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#search-bar button:hover {
+    background-color: #367bbf;
+}
+
+/* Ajout d'une classe pour afficher le conteneur */
+.hidden {
+    display: none;
+}

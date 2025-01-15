@@ -17,38 +17,32 @@
 			<h1 class="titre">Cloudy<span class="simple">®</span></h1>
 			<header class="header">
 				<div class="image-card">
-					<img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" />
+					<img id="weather-icon" class="image-fond" src="img/" alt="Icône météo" />
 				</div>
-				<h2>Le Havre</h2>
-				<span class="choix-ville"><box-icon color="#a4d4f5" type='solid' name='map'></box-icon></span>
+				<h2 id="city-name">Ville</h2>
+				<span class="choix-ville">
+					<box-icon color="#a4d4f5" type='solid' name='map'></box-icon>
+				</span>
+				
+				<!-- Barre de recherche -->
+				<div id="search-bar" class="hidden">
+					<input id="city-input" type="text" placeholder="Entrez une ville" />
+					<button id="search-button">Rechercher</button>
+				</div>
 				<span class="reglages-icon"><box-icon color="#a4d4f5" type='solid' name='cog'></box-icon></span>
 			</header>
 			<div class="meteo-actuel">
-				<h2 class="temperature">22°</h2>
-				<p class="condition">Ensoleillé</p>
-				<p class="maximale-minimale">22°/14°</p>
+				<h2 id="current-temp" class="temperature">--°</h2>
+				<p id="weather-condition" class="condition">--</p>
+				<p id="temp-range" class="maximale-minimale">--°/--°</p>
 			</div>
-			<div class="prochains-jours">
-				<div class="jour">
-					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
-					<p>Ce jour</p>
-					<p>22° / 14°</p>
-				</div>
-				<div class="jour">
-					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
-					<p>lundi</p>
-					<p>20° / 12°</p>
-				</div>
-				<div class="jour">
-					<p><img class="image-fond" src="img/01d_t@4x.png" alt="Fond soleil" /></p>
-					<p>mardi</p>
-					<p>19° / 10°</p>
-				</div>
+			<div class="prochains-jours" id="forecast">
+				<!-- Prévision pour insérées des données api par JavaScript -->
 			</div>
 			<div class="ventleverhumidité">
-				<h2 class="leversoleil">lever du soleil</h2>
-				<h3 class="vents"><box-icon name='wind'></box-icon></h3>
-				<h4 class="humidité"><box-icon name='water'></box-icon></h4>
+				<h2 class="leversoleil">Lever <span id="sunrise-time">--:--</span></h2>
+				<h3 class="vents">Vent : <span id="wind-speed">-- km/h</span></h3>
+				<h4 class="humidité">Humidité : <span id="humidity-level">--%</span></h4>
 			</div>
 		</div>
 	</div>
