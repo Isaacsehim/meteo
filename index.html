@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cloudy</title>
-	<link rel="stylesheet" href="Css/style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/ehv5foc.css">
-	<script defer src="assets/script.js"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+	<link rel="stylesheet" href="Css/style.css">
+	<script defer src="assets/script.js"></script>
 </head>
 
 <body>
+<main id="interface">	
 	<div class="meteo-app">
 		<div class="meteo-card">
 			<h1 class="titre">Cloudy<span class="simple">®</span></h1>
@@ -32,20 +33,24 @@
 				<span class="reglages-icon"><box-icon color="#a4d4f5" type='solid' name='cog'></box-icon></span>
 			</header>
 			<div class="meteo-actuel">
-				<h2 id="current-temp" class="temperature">--°</h2>
+				<h4 class="dateheure">Date et heure <span id="dt_txt">--/--/-- --:--</span></h4>
+				<h3 id="current-temp" class="temperature">--°</h3>
+				<h5 class="resenti">Ressenti<span id="feels_like">--°</span></h5>
 				<p id="weather-condition" class="condition">--</p>
 				<p id="temp-range" class="maximale-minimale">--°/--°</p>
 			</div>
 			<div class="prochains-jours" id="forecast">
-				<!-- Prévision pour insérées des données api par JavaScript -->
+				<!-- Prévision pour insérées des données api via JavaScript -->
 			</div>
 			<div class="ventleverhumidité">
-				<h2 class="leversoleil">Lever <span id="sunrise-time">--:--</span></h2>
-				<h3 class="vents">Vent : <span id="wind-speed">-- km/h</span></h3>
-				<h4 class="humidité">Humidité : <span id="humidity-level">--%</span></h4>
+				<h5 class="leversoleil">Lever <span id="sunrise-time">--:--</span></h5>
+				<h6 class="couchersoleil">Coucher <span id="sunset-time">--:--</span></h6>
+				<h7 class="vents">Vent : <span id="wind-speed">-- km/h</span></h7>
+				<h8 class="humidité">Humidité : <span id="humidity-level">--%</span></h8>
 			</div>
 		</div>
 	</div>
+</main>	
 </body>
 
 </html>
