@@ -55,6 +55,10 @@ h1 {
 	transition-duration: 1s;
 }
 
+span#dt_txt {
+	text-transform: capitalize;
+}
+
 .reglages-icon {
 	cursor: pointer;
 	display: flex;
@@ -82,6 +86,10 @@ h2.temperature {
 
 .temperature {
 	font-size: 80px;
+}
+
+.ressenti {
+	font-size: 16px;
 }
 
 .condition {
@@ -126,18 +134,21 @@ h2.temperature {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-size: 16px;
 }
 
 .couchersoleil {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-size: 16px;
 }
 
 .vents {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin: 37.28px 0px;
 }
 
 .humidité {
@@ -147,16 +158,15 @@ h2.temperature {
 }
 
 #search-bar {
-    display: none; /* Masqué par défaut */
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: rgb(164,212,245);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    z-index: 1;
 }
 
 #search-bar input {
@@ -167,8 +177,8 @@ h2.temperature {
 }
 
 #search-bar button {
-    background-color: #439bda;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0.1);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -176,10 +186,14 @@ h2.temperature {
 }
 
 #search-bar button:hover {
-    background-color: #367bbf;
+    background-color: #a4d4f5;
 }
 
 /* Ajout d'une classe pour afficher le conteneur */
 .hidden {
     display: none;
+}
+
+#weather-condition {
+    text-transform: capitalize;
 }
