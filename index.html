@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cloudy</title>
-	<link rel="stylesheet" href="https://use.typekit.net/ehv5foc.css">
-	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-	<link rel="stylesheet" href="Css/style.css">
-	<script defer src="Moment/moment.js"></script>
-	<script defer src="assets/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudy</title>
+
+  <!-- Importation des ressources externes -->
+  <link rel="stylesheet" href="https://use.typekit.net/ehv5foc.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <script defer src="Moment/moment.js"></script>
+
 </head>
-
 <body>
-	<main id="interface">
-		<div class="meteo-app">
-			<div class="meteo-card">
-				<h1 class="titre">Cloudy<span class="simple">®</span></h1>
-				<header class="header">
-					<div class="image-card">
-						<img id="weather-icon" class="image-fond" src="img/" alt="Icône météo" />
-					</div>
-					<h2 id="city">Ville</h2>
-					<span class="choix-ville"> <box-icon color="#a4d4f5" type='solid' name='map'></box-icon></span>
 
-					<!-- Barre de recherche -->
-					<form id="search-bar">
-						<input id="city-input" name="city" type="text" placeholder="Entrez une ville"/>
-						<button id="search-button">Rechercher</button>
-					</form>
+  <!-- Conteneur principal de l'application -->
+  <main id="interface">
+    <div class="meteo-app">
+      <div class="meteo-card">
+        <h1 class="titre">Cloudy<span class="simple">®</span></h1>
+        
+        <!-- En-tête de l'application -->
+        <header class="header">
+          <!-- Icône météo -->
+          <div class="image-card">
+            <div class="container">
+              <div class="search-bar">
+                <div id="searchBox">
+                  <form action="">
+                    <input type="text" id="search" placeholder="Rechercher">
+                    <button type="button" id="btn">
+                      <img src="img/navigation icône.svg" alt="Icône de recherche">
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ville et choix de ville -->
+          <h2 id="city">Ville</h2>
+          <span id="choixville" class="choixville">
+          </span>
+          
+          <!-- Barre de recherche -->
 
-					<!-- icone de réglage -->
-					<span class="reglages-icon"><box-icon color="#a4d4f5" type='solid' name='cog'></box-icon></span>
-				</header>
-				<div class="meteo-actuel">
-					<h4 class="date">Date <span id="dt_txt">--/--/-- --:--</span></h4>
-					<p class="heure">Heure <span id="dt_txt">--:--</span></p>
-					<h3 id="current-temp" class="temperature">--°</h3>
-					<h5 class="ressenti">Ressenti<span id="feels_like">--°</span></h5>
-					<p id="weather-condition" class="condition">--</p>
-					<p id="temp-range" class="maximale-minimale">--°/--°</p>
-				</div>
-				<div class="prochains-jours" id="forecast">
-					<!-- Prévision pour insérées des données api via JavaScript -->
-				</div>
-				<div class="ventleverhumidité">
-					<h5 class="leversoleil">Lever <span id="sunrise-time">--:--</span></h5>
-					<h6 class="couchersoleil">Coucher <span id="sunset-time">--:--</span></h6>
-					<p class="vents">Vent : <span id="wind-speed">-- km/h</span></p>
-					<p class="humidité">Humidité : <span id="humidity-level">--%</span></p>
-				</div>
-			</div>
-		</div>
-	</main>
+
+          <!-- Icône des réglages -->
+          <span class="reglages-icon">
+            <box-icon color="#a4d4f5" type='solid' name='cog'></box-icon>
+          </span>
+        </header>
+
+        <!-- Météo actuelle -->
+        <div class="meteo-actuel">
+          <!-- Contenu dynamique de la météo ici -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script defer src="assets/script.js"></script>
 </body>
-
 </html>
